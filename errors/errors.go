@@ -19,8 +19,8 @@ func (s *SError) Error() string {
 	return fmt.Sprintf(message, s.Type, s.Message)
 }
 
-// NewError returns a new Error of the given type
-func NewError(Type int, message ...string) *SError {
+// New returns a new Error of the given type
+func New(Type int, message ...string) *SError {
 	result := &SError{
 		Type: Type,
 	}
